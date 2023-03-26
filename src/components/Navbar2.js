@@ -1,3 +1,4 @@
+import { Reorder } from '@mui/icons-material';
 import React,{useState , useEffect} from 'react'
 import {Link , useLocation} from 'react-router-dom'
 
@@ -20,7 +21,7 @@ function Navbar2() {
     <div className='navbar'>
         <div className='toggleButton'  id ={expandNavbar ? 'open' : 'close'}>
             <button onClick={() =>setexpandNavbar((prev)=>!prev)}>
-                Menu
+                <Reorder />
             </button>
         </div>
 

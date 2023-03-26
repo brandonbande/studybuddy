@@ -1,4 +1,5 @@
 //import { Facebook, LinkedIn, Twitter } from '@mui/icons-material'
+import { Facebook, LinkedIn, Mail, Twitter, YouTube } from '@mui/icons-material';
 import React from 'react'
 import Accordion from 'react-bootstrap/Accordion';
 
@@ -24,9 +25,12 @@ function Footer() {
         </Accordion>
         </div>
         <div className='socialMedia'>
-            Links
-            <p>Icon</p>
-            <p>icon2</p>
+            <h2>Links</h2>
+            <Facebook />
+            <LinkedIn />
+            <Twitter />
+            <Mail />
+            <YouTube />
         </div>
         <div className='socialMedia'>
             Details

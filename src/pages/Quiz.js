@@ -1,4 +1,4 @@
-import React ,{useState} from 'react'
+import React ,{useState ,useEffect} from 'react'
 
 
 const questions =[
@@ -38,12 +38,16 @@ function Quiz() {
   const [showScore, setshowScore] = useState(false);
   const [score, setscore] = useState(0);
 
+
+  // what happens when someone clicks on an option
   const handleAnswerOptionClick = (isCorrect) =>{
 
+    //add to score for correct answer
     if(isCorrect){
       setscore(score+1)
     }
 
+    //go to next question
     const nextQuestion = currentQuestion + 1 ;
     if (nextQuestion < questions.length){
       setcurrentQuestion(nextQuestion)
@@ -52,6 +56,8 @@ function Quiz() {
     }
   }
 
+
+  //reset Quiz by indexing first question and clearing scores + removing the score
   const resetQuiz = () =>{
     setscore(0)
     setcurrentQuestion(0)
@@ -59,17 +65,20 @@ function Quiz() {
   }
 
 
-
-  return (
-    <div className='quiz' >
-
-      {showScore ? (
-        <div className='scoreSection'>
+  //Finish Quiz Page showing score and retry button
+  const finishQuiz = () =>{
+    return (
+      <div className='scoreSection'>
           <div className='score'>Score {score} / {questions.length}</div>
           <button onClick={() => resetQuiz()}>Retry</button>
-        </div>
-      ) : (
-        <div className='questionSection'>
+      </div>
+    );
+  }
+
+  //show the quiz in the page
+const showQuiz = () =>{
+  return(
+    <div className='questionSection'>
           <div className='questionCount'>
             Question : {currentQuestion + 1} / {questions.length}
           </div>
@@ -85,8 +94,41 @@ function Quiz() {
           </div>
 
         </div>
+  );
+}
+
+const now = new Date();
+  const [targetTime, setTargetTime] = useState(new Date(now.getTime() + (0.2 * 60 * 1000)));
+  const [timeRemaining, setTimeRemaining] = useState(targetTime - new Date());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTimeRemaining(targetTime - new Date());
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [targetTime]);
+
+
+
+
+  return (
+    <div className='quiz' >
+
+      {timeRemaining > 0 ? (
+        <div>
+          Time remaining: 
+          {Math.floor((timeRemaining / (1000 * 60)) % 60)} minutes{' '}
+          {Math.floor(timeRemaining / 1000) % 60} seconds
+        </div>
+      ) : (
+        finishQuiz()
+      )}
+      
+    {showScore ? (
+        finishQuiz()
+      ) : (
+        !showQuiz()
       )
-    
     }
 
     </div>
