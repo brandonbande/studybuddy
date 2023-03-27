@@ -265,7 +265,7 @@
 }
 
 
-@media only screen and (min-width:600px) {
+@media only screen and (min-width:960px) {
     .toggleButton{
         display: none;
     }
@@ -284,8 +284,49 @@
     
 }
 
-@media only screen and (max-width:600px) {
+@media only screen and (max-width:900px) {
+    .about{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
 
+    }
+    .about h2{
+        font-size: 50px;
+    }
+    .about .prompt{
+        font-size: 30px;
+    }
+
+    .itemsBody{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .oneOfThree{
+        width: 60%;
+        margin: 20px;
+        min-height: 400px;
+    }
+
+    .quiz , .questionRoot{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .questionText , .score{
+        font-size: 30px;
+    }
+
+    .scoreSection button{ 
+        background-color: green;
+        color: #f0f0f0;
+        width: 60%;
+    }
+
+    
     .performerRow3 .performerColumn:not(:first-child):not(:nth-child(3)) {
         display: none;
     }

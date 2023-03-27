@@ -206,7 +206,7 @@ function Quiz() {
     setcurrentQuestion(0);
     setshowScore(false);
     const now = new Date();
-    setTargetTime(new Date(now.getTime() + (5 * 60 * 1000)));
+    setTargetTime(new Date(now.getTime() + (3 * 60 * 1000)));
     questions = createQuestions();
   };
 
@@ -245,7 +245,7 @@ const showQuiz = () =>{
 }
 
 const now = new Date();
-  const [targetTime, setTargetTime] = useState(new Date(now.getTime() + (5 * 60 * 1000)));
+  const [targetTime, setTargetTime] = useState(new Date(now.getTime() + (3 * 60 * 1000)));
   const [timeRemaining, setTimeRemaining] = useState(targetTime - new Date());
 
   useEffect(() => {
