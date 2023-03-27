@@ -17,7 +17,7 @@ const blogs = [
     title : 'This  Notice',
     author : 'admin02',
     date_created : '03/12/2023',
-    body: 'Sample Message 001 as test blog'
+    body: 'Sample Message 001 as test blog tiriri'
   },
 ]
 
