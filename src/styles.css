@@ -283,3 +283,11 @@
     }
     
 }
+
+@media only screen and (max-width:600px) {
+
+    .performerRow3 .performerColumn:not(:first-child):not(:nth-child(3)) {
+        display: none;
+    }
+    
+}

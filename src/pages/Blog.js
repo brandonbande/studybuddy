@@ -28,7 +28,7 @@ function Blog() {
   return (
     <div className='blog;
     '>
-
+      Coming Soon
     </div>
   )
 }

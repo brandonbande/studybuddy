@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 function Countdown() {
     const now = new Date();
-  const [targetTime, setTargetTime] = useState(new Date(now.getTime() + (1 * 60 * 1000)));
+  const [targetTime, setTargetTime] = useState(new Date(now.getTime() + (5 * 60 * 1000)));
   const [timeRemaining, setTimeRemaining] = useState(targetTime - new Date());
 
   useEffect(() => {

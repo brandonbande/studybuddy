@@ -20,6 +20,7 @@ function Navbar() {
     );
 
 
+    const name = localStorage.getItem("name");
 
   return (
     //there are 2 nav bar identities open and close.First we check if the expandNavbar is true or not.If true we use the open id
@@ -32,7 +33,11 @@ function Navbar() {
                 <Link to = '/'>Home</Link>
                 <Link to = '/quiz'>Quiz</Link>
                 <Link to = '/blog'>Blog</Link>
-                <Link to = '/board'>{localStorage.getItem("name")}</Link>
+                {name ? (
+          <Link to="/board">{name}</Link>
+        ) : (
+          <Link to="/login">Log In</Link>
+        )}
             </div>
         </div>
     </div>
