@@ -34,7 +34,7 @@ function Footer() {
         </div>
         <div className='socialMedia'>
             Details
-            <p>Icon</p>
+            <p>Hi</p>
             <p>icon2</p>
         </div>
        </div>
