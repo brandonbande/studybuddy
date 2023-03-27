@@ -11,7 +11,7 @@ const blogs = [
     title : 'Urgent Notice',
     author : 'admin11',
     date_created : '03/12/2023',
-    body: 'Sample Message 001 as test blog'
+    body: 'Sample Message 0015656 as test blog'
   },
   {
     title : 'This  Notice',
