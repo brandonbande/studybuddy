@@ -1,15 +1,17 @@
 import { initializeApp } from "firebase/app";
 import {getFirestore} from '@firebase/firestore'
 import {getAuth, GoogleAuthProvider, signInWithPopup} from 'firebase/auth'
+require('dotenv').config();
+
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBD-X2-j8_w8-owIls1SMAPbbsNFb83B40",
-    authDomain: "studybuddy-d89a8.firebaseapp.com",
-    projectId: "studybuddy-d89a8",
-    storageBucket: "studybuddy-d89a8.appspot.com",
-    messagingSenderId: "286368335204",
-    appId: "1:286368335204:web:fb0ed0e0e719cc256e2671",
-    measurementId: "G-315YFP813Z"
+  apiKey: process.env.API_KEY,
+  authDomain: process.env.AUTH_DOMAIN,
+  projectId: process.env.PROJECT_ID,
+  storageBucket: process.env.STORAGE_BUCKET,
+  messagingSenderId: process.env.MESSAGING_SENDER_ID,
+  appId: process.env.APP_ID,
+  measurementId: process.env.MEASUREMENT_ID
   };
 
   const app = initializeApp(firebaseConfig);
