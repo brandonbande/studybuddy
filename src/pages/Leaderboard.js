@@ -8,7 +8,7 @@ import React from 'react'
         average : 95
       },
       {
-        username : 'i_am_eulie',
+        username : 'i_am_bee',
         centre : 'Centre 2',
         overallScore : 97836 ,
         average : 99
