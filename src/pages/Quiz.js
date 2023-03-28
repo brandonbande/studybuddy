@@ -1,4 +1,6 @@
 import React ,{useState ,useEffect} from 'react'
+import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
+
 
 
 const list =[
@@ -180,24 +182,33 @@ function Quiz() {
   const [currentQuestion, setcurrentQuestion] = useState(0);
   const [showScore, setshowScore] = useState(false);
   const [score, setscore] = useState(0);
+  const [selectedAnswer, setSelectedAnswer] = useState(null);
 
 
   // what happens when someone clicks on an option
-  const handleAnswerOptionClick = (isCorrect) =>{
-
-    //add to score for correct answer
-    if(isCorrect){
-      setscore(score+1)
+  const handleAnswerOptionClick = (isCorrect, index) => {
+    // set selected answer
+    setSelectedAnswer(index);
+  
+    // add to score for correct answer
+    if (isCorrect) {
+      setscore(score + 1);
     }
-
-    //go to next question
-    const nextQuestion = currentQuestion + 1 ;
-    if (nextQuestion < questions.length){
-      setcurrentQuestion(nextQuestion)
-    }else{
-      setshowScore(true)
-    }
-  }
+  
+    // delay moving to next question by 2 seconds
+    setTimeout(() => {
+      // go to next question
+      const nextQuestion = currentQuestion + 1;
+      if (nextQuestion < questions.length) {
+        setcurrentQuestion(nextQuestion);
+      } else {
+        setshowScore(true);
+      }
+  
+      // reset selected answer
+      setSelectedAnswer(null);
+    }, 1000);
+  };
 
 
   //reset Quiz by indexing first question and clearing scores + removing the score
@@ -227,15 +238,30 @@ const showQuiz = () =>{
   return(
     <div className='questionSection'>
           <div className='questionCount'>
-            Question : {currentQuestion + 1} / {questions.length}
+            {Array.from({ length: questions.length }, (_, index) => (
+              <FiberManualRecordIcon
+                key={index}
+                sx={{
+                  color: index === currentQuestion ? 'darkgreen' : 'lightgreen',
+                  fontSize: index === currentQuestion ? '3rem' : '2rem',
+                }}
+              />
+            ))}
           </div>
           <div className='questionRoot'>
             <div className='questionText'>
               {questions[currentQuestion].question}
             </div>
             <div className='answerSection'>
-              {questions[currentQuestion].answerOptions.map((answerOption)=>(
-                <button onClick={()=>handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
+              {questions[currentQuestion].answerOptions.map((answerOption, index) => (
+                <button
+                  className={`${
+                    selectedAnswer === index ? 'selected' : ''
+                  } ${selectedAnswer !== null && answerOption.isCorrect ? 'correct' : ''}`}
+                  onClick={() => handleAnswerOptionClick(answerOption.isCorrect, index)}
+                >
+                  {answerOption.answerText}
+                </button>
               ))}
             </div>
           </div>
@@ -261,17 +287,22 @@ const now = new Date();
   return (
     <div className='quiz' >
 
-{timeRemaining > 0 && !showScore ? (
-  <>
-    <div>
-      Time remaining: {Math.floor((timeRemaining / (1000 * 60)) % 60)} minutes{" "}
-      {Math.floor(timeRemaining / 1000) % 60} seconds
-    </div>
-    {showQuiz()}
-  </>
-) : (
-  finishQuiz()
-)}
+      {timeRemaining > 0 && !showScore ? (
+        <div className='timerContainer' >
+          <div className={`timer ${timeRemaining <= 30000 ? 'low-time' : ''}`}>
+              {Math.floor((timeRemaining / (1000 * 60)) % 60)
+                .toString()
+                .padStart(2, '0')}{' '}
+              :{' '}
+              {Math.floor((timeRemaining / 1000) % 60)
+                .toString()
+                .padStart(2, '0')}
+          </div>
+          {showQuiz()}
+        </div>
+      ) : (
+        finishQuiz()
+      )}
 
     </div>
   )
