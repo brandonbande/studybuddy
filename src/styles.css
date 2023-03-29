@@ -228,6 +228,14 @@
     display: grid;
     grid-template-columns: 3fr 1fr 1fr;
 }
+.socialMedia a {
+    color: white;
+  }
+  
+  .socialMedia svg {
+    width: 20px;
+    height: 20px;
+  }
 .socialMedia{
     padding: 10px;
 }
@@ -241,7 +249,29 @@
     font-size: 20px;
     font-weight: bold;
 }
+.socialMedia , .contactForm{ 
+    display: flex;
+    flex-direction: column;
+}
 
+.formSubmit{
+    color: white;
+    background-color: green;
+    width: 100%;
+    min-height: 30px;
+    font-size: 25px;
+}
+#email , #message , #name{
+    width: 100%;
+    border-radius: 5px;
+    min-height: 25px;
+    font-size: 12px;
+    padding: 3px;
+    margin-bottom: 5px;
+}
+#message{
+    min-height: 80px;
+}
 .miniboard{
     width: 100%;
     height: auto;
