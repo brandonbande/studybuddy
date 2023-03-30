@@ -28,7 +28,7 @@ function Navbar2() {
         <div className='links'> 
                 <Link to = '/'>Home</Link>
                 <Link to = '/quiz'>Quiz</Link>
-                <Link to = '/blog'>Blog</Link>
+                <Link to = '/learn'>Learn</Link>
                 <Link to = '/board'>Leaderboard</Link>
                 <Link to = '/profile'>{localStorage.getItem('name')}</Link>
                 <img src={localStorage.getItem("profilePic")} />

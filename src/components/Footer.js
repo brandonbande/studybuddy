@@ -1,6 +1,7 @@
 
 import { Facebook, LinkedIn, Mail, Twitter} from '@mui/icons-material';
 import React from 'react'
+import Accordion from './Accordion';
 import ContactForm from './ContactForm';
 //import 'bootstrap/dist/css/bootstrap.min.css';
 //import 'bootstrap/dist/js/bootstrap.bundle.min.js';
@@ -10,6 +11,7 @@ function Footer() {
   return (
     <div className='footer'>
        <div className='footerMain'>
+        <Accordion />
         <div className='socialMedia'>
   <h2>Contact Us</h2>
       <a href="http://www.facebook.com/brandonbande">
