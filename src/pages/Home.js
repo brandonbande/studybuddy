@@ -1,6 +1,7 @@
 import React from 'react'
 import OneOfThree from '../components/OneOfThree'
 import { Link } from 'react-router-dom'
+import MyDivs from '../components/MyDivs'
 
 function Home() {
   return (
@@ -17,9 +18,7 @@ function Home() {
       </div>
       <div className='itemsBody'>
         
-        <OneOfThree />
-        <OneOfThree />
-        <OneOfThree />
+        <MyDivs />
 
       </div>
 

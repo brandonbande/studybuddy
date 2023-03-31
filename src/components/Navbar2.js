@@ -9,7 +9,7 @@ function Navbar2() {
 
     const location = useLocation();
 
-    useEffect( //collapse the navbar 
+    useEffect( //collapse the navbar  
         ()=>{
             setexpandNavbar(false);
         },[location]
@@ -20,7 +20,7 @@ function Navbar2() {
   return (
     <div className='navbar'>
         <div className='toggleButton'  id ={expandNavbar ? 'open' : 'close'}>
-            <button onClick={() =>setexpandNavbar((prev)=>!prev)}>
+            <button onClick={() =>{setexpandNavbar((prev)=>!prev)}}>
                 <Reorder />
             </button>
         </div>

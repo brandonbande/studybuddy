@@ -84,6 +84,7 @@ const Learn = () => {
       alert(`Your final score is ${score}/${questions.length}`);
       questions = createQuestions();
     }
+    setshowExp(false)
   };
 
   return (
