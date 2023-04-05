@@ -95,7 +95,7 @@ button :hover{
       position: absolute;
       left: 0;
       top: 80px;
-      height: auto;
+      height: 100vh;
       width: 100%;
       background-color: #021e39 ;
       display: flex;
@@ -106,7 +106,8 @@ button :hover{
   
     .Navbar .leftSide #hidden a{
       margin: 10px;
-      font-size: 25px;
+      font-size: 50px;
+      border-bottom: white 3px;
     
   
     }

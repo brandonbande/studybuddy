@@ -79,7 +79,7 @@
     margin-top: 50px;
     background-color: #f0f0f0;
     color: black;
-    width: 60vw;
+    width: 80%;
     min-height: 60vh;
     height: min-content;
     border-radius: 15px;
@@ -320,23 +320,8 @@ button.selected {
     margin-bottom: 10px;
   }
   
+
 @media only screen and (max-width:900px) {
-    .navbar a{
-        width:70px;
-        
-    }  
-}
-
-@media only screen and (max-width:600px) {
-
-    .toggleButton{
-        display: flex;
-    }
-
-    #close a{
-        display: none;
-    }
-    
     .about{
         display: flex;
         flex-direction: column;
@@ -346,10 +331,10 @@ button.selected {
 
     }
     .about h2{
-        font-size: 50px;
+        font-size: 30px;
     }
     .about .prompt{
-        font-size: 30px;
+        font-size: 20px;
     }
 
     .itemsBody{
@@ -363,7 +348,7 @@ button.selected {
         min-height: 400px;
     }
 
-    .quiz , .questionRoot{
+    .quiz , .questionRoot ,.learnRoot{
         display: flex;
         flex-direction: column;
         width: 90%;
@@ -373,8 +358,8 @@ button.selected {
         font-size: 20px;
     }
 
-    .questionSection{
-        height: 500px;
+    .questionSection , .answerSection{
+        height: 400px;
     }
 
     .scoreSection button{ 
@@ -401,23 +386,4 @@ button.selected {
 
 }
 
-@media only screen and (min-width:960px) {
-    .toggleButton{
-        display: none;
-    }
-
-    .hiddenLinks{
-        display: none;
-    }
-
-    #open{
-        height: 100px;
-    }
-
-    #open .links{
-        flex-direction: row;
-    }
-
-    
-}
 
