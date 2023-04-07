@@ -3,8 +3,7 @@ import { Facebook, LinkedIn, Mail, Twitter} from '@mui/icons-material';
 import React from 'react'
 import Accordion from './Accordion';
 import ContactForm from './ContactForm';
-//import 'bootstrap/dist/css/bootstrap.min.css';
-//import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import '../styles/Footer.css'
 
 
 function Footer() {
@@ -28,7 +27,7 @@ function Footer() {
       </a>
     </div>
         <div className='contactForm'>
-            Details
+            <h2>Details</h2>
             <ContactForm />
         </div>
        </div>

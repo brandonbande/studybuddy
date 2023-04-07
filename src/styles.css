@@ -187,66 +187,8 @@
     justify-items: center;
 }
 
-.footer{
-    min-height: 100px;
-    height: auto;
-    background-color: black;
-    color: white;
-    width: 100%;
-    padding: 3em 2em;
 
-}
-.footerMain{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 3fr 1fr 1fr;
-    justify-items: center;
-    padding: 5px;
-}
-.socialMedia a {
-    color: white;
-  }
-  
-.socialMedia svg {
-    width: 20px;
-    height: 20px;
-  }
-.socialMedia{
-    padding: 10px;
-}
-.socialMedia p{
-    font-size: 15px;
-    padding: 5px;
-}
-.footerSig{
-    width: 100%;
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-}
-.socialMedia , .contactForm{ 
-    display: flex;
-    flex-direction: column;
-}
 
-.formSubmit{
-    color: white;
-    background-color: green;
-    width: 100%;
-    min-height: 30px;
-    font-size: 25px;
-}
-#email , #message , #name{
-    width: 100%;
-    border-radius: 5px;
-    min-height: 25px;
-    font-size: 12px;
-    padding: 3px;
-    margin-bottom: 5px;
-}
-#message{
-    min-height: 80px;
-}
 .miniboard{
     width: 100%;
     height: auto;
@@ -372,17 +314,11 @@ button.selected {
         text-align: center;
     }
 
+
     
-    .performerRow3 .performerColumn:not(:first-child):not(:nth-child(3)) {
+    .performerRow .performerColumn:not(:first-child):not(:nth-child(3)) {
         display: none;
     }
-
-    .footerMain{
-        display: flex;
-        flex-direction: column;
-    }
-    
-
 
 }
 

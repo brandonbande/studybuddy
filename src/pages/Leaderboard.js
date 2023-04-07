@@ -40,7 +40,7 @@ import React from 'react'
         streak : 16
       },
       {
-        username : 'i_am_eulie',
+        username : 'i_am_tee',
         centre : 'Centre 1',
         streak : 15
       },
@@ -89,10 +89,10 @@ function Leaderboard() {
             Centre
           </div>
           <div className='performerColumn'>
-            Overall Score
+            Overall
           </div>
           <div className='performerColumn'>
-            Test Average
+            Average
           </div>
         </div>
       {topPerformers.map((perfomer)=>(
@@ -152,7 +152,7 @@ function Leaderboard() {
             Province
           </div>
           <div className='performerColumn'>
-            Average Score per Student
+            Average Score
           </div>
         </div>
       {topCentres.map((centre)=>(
