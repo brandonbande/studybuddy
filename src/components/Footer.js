@@ -12,7 +12,6 @@ function Footer() {
        <div className='footerMain'>
         <Accordion />
         <div className='socialMedia'>
-  <h2>Contact Us</h2>
       <a href="http://www.facebook.com/brandonbande">
         <Facebook />
       </a>
@@ -27,7 +26,7 @@ function Footer() {
       </a>
     </div>
         <div className='contactForm'>
-            <h2>Details</h2>
+            <h2>Leave a message</h2>
             <ContactForm />
         </div>
        </div>

@@ -6,6 +6,7 @@ button :hover{
     cursor :pointer;
   }
   .Navbar{
+    padding: 10px;
     background-color: #021e39;
     width: 100%;
     height: 80px;

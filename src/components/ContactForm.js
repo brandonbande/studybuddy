@@ -31,7 +31,7 @@ const ContactForm = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit} style={{ width: '400px' }}>
+        <form onSubmit={handleSubmit} style={{ width: '100%' }}>
           <input
             type="text"
             id="name"
