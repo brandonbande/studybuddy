@@ -10,7 +10,7 @@ import Footer from './components/Footer';
 import Learn from './pages/Learn';
 import UpdatedNavbar from './components/UpdatedNavbar';
 import Menu from './components/Menu';
-import Login from './components/Login';
+//import Login from './components/Login';
 //import FirebaseGoogleAuth from './FirebaseGoogleAuth';
 //import SampleCrud from './SampleCrud';
 
@@ -26,7 +26,6 @@ function App() {
           <Route path='/board' element={<Leaderboard />} />
           <Route path='/quiz' element={<Quiz />} />
           <Route path='/profile' element={<Profile />} />  
-          <Route path='/login' element={<Login />} />  
           <Route path='/menu' element={<Menu />} />
         </Routes>
         <Footer />
